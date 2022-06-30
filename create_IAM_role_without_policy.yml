@@ -1,0 +1,7 @@
+---
+- hosts: localhost
+  tasks:
+    - name: Create a role with description
+      iam_role:
+        name: mynewrole2
+        assume_role_policy_document: "{{ lookup('file','policy.json') }}"
