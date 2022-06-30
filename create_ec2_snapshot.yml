@@ -1,0 +1,8 @@
+---
+- hosts: localhost
+  tasks:
+    - name: Create EC2 snapshot
+      ec2_snapshot:
+        volume_id: vol-xxxxxxxxxxxxxxxxxx
+        region: us-east-2
+        description: snapshot of the EBS volume which is not attached to any ec2 instance 

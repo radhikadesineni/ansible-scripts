@@ -1,0 +1,9 @@
+---
+- hosts: localhost
+  tasks:
+    - name: Create EC2 snapshot from a volume attached to an instance using device name instead of volume id
+      ec2_snapshot:
+        instance_id: i-xxxxxxxxxxxxxx
+        device_name: /xxx/xxx
+        region: us-east-2
+        description: snapshot of the EBS volume using device name which is attached to an existing  instance 
